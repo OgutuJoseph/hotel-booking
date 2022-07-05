@@ -27,6 +27,8 @@ mongoose.connection.on('disconnected', () => {
     console.log('Database disconnected.');
 })
 
+app.use(express.json());
+
 // middlewares
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
