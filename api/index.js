@@ -27,13 +27,21 @@ mongoose.connection.on('disconnected', () => {
     console.log('Database disconnected.');
 })
 
+// middlewares
+
+app.use((req, res, next) => {
+    console.log('hi, im a middleware.')
+    next();
+})
+
 app.use(express.json());
 
-// middlewares
+
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
+
 
 app.listen(8300, () => {
     connect();
