@@ -57,7 +57,7 @@ router.get('/', async (req, res, next) => {
         const hotels = await Hotel.find();
         res.status(200).json(hotels);
     } catch (error) {
-        res.status(500).json(error);
+        next(createError());
     }
 })
 
