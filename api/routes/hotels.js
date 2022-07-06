@@ -1,5 +1,5 @@
 import express from 'express';
-import { createHotel, updateHotel, deleteHotel, getHotel, getHotels } from '../controllers/hotel.js';
+import { createHotel, updateHotel, deleteHotel, getHotel, getHotels, countByCity, countByType } from '../controllers/hotel.js';
 import { verifyUser, verifyAdmin } from '../utils/verifyToken.js';
 
 const router = express.Router();
@@ -14,10 +14,16 @@ router.put('/:id', verifyAdmin, updateHotel);
 router.delete('/:id', verifyAdmin, deleteHotel);
 
 // get route
-router.get('/:id', getHotel)
+router.get('/find/:id', getHotel)
 
 // get all route
 router.get('/', getHotels)
+
+// count by cisty
+router.get('/countByCity', countByCity);
+
+// count by type
+router.get('countByType', countByType);
 
 // get all - test express error handler 1
 // router.get('/', async (req, res, next) => {
