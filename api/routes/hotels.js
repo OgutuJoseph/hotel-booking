@@ -1,5 +1,5 @@
 import express from 'express';
-import { createHotel, updateHotel, deleteHotel, getHotel, getHotels } from '../controllers/hotel.js';
+import { createHotel, updateHotel, deleteHotel, getHotel, getHotels, countByCity, countByType } from '../controllers/hotel.js';
 import { verifyUser, verifyAdmin } from '../utils/verifyToken.js';
 
 const router = express.Router();
@@ -13,11 +13,18 @@ router.put('/:id', verifyAdmin, updateHotel);
 // delete route
 router.delete('/:id', verifyAdmin, deleteHotel);
 
+/** to avoind error: "message": "Cast to ObjectId failed for value \"countByCity\" (type string) at path \"_id\" for model \"Hotel\"", */
 // get route
-router.get('/:id', getHotel)
+// router.get('/:id', getHotel)
+/** use below instead */
+router.get('/find/:id', getHotel);
 
 // get all route
 router.get('/', getHotels)
+
+router.get('/', getHotels)
+router.get('/countByCity', countByCity)
+router.get('/countByType', countByType)
 
 // get all - test express error handler 1
 // router.get('/', async (req, res, next) => {
