@@ -13,17 +13,18 @@ router.put('/:id', verifyAdmin, updateHotel);
 // delete route
 router.delete('/:id', verifyAdmin, deleteHotel);
 
+/** to avoind error: "message": "Cast to ObjectId failed for value \"countByCity\" (type string) at path \"_id\" for model \"Hotel\"", */
 // get route
-router.get('/find/:id', getHotel)
+// router.get('/:id', getHotel)
+/** use below instead */
+router.get('/find/:id', getHotel);
 
 // get all route
 router.get('/', getHotels)
 
-// count by cisty
-router.get('/countByCity', countByCity);
-
-// count by type
-router.get('countByType', countByType);
+router.get('/', getHotels)
+router.get('/countByCity', countByCity)
+router.get('/countByType', countByType)
 
 // get all - test express error handler 1
 // router.get('/', async (req, res, next) => {
