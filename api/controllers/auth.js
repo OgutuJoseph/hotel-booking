@@ -10,9 +10,12 @@ export const register = async (req, res, next) => {
         const hash = bcrypt.hashSync(req.body.password, salt);
         
         const newUser = User({
-            username: req.body.username,
-            email: req.body.email,
-            password: hash
+            // username: req.body.username,
+            // email: req.body.email,
+            // country: req.body.country,
+            // phone: req.body.phone
+            ...req.body,
+            password: hash,
         })
 
 
