@@ -49,7 +49,7 @@ export const login = async (req, res, next) => {
         // }).status(200).send({...otherDetails});
 
         // // -- # To return the token as part of the response, optionally you can check it from the cokkies as it is also stored there #
-        }).status(200).send({...otherDetails, token});
+        }).status(200).send({ details: { ...otherDetails, },  token, isAdmin});
     } catch (error) {
         next(error)
     }
