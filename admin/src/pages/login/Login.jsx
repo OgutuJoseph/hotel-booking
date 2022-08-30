@@ -24,7 +24,7 @@ const Login = () => {
                 navigate('/');
             }
             else {
-                dispatch({ type: 'LOGIN_FAILURE', payload: { message: 'You are not authorized!' } })
+                dispatch({ type: 'LOGIN_FAILURE', payload: { message: 'You are not authorized! Only Admin can login to this route.' } })
             }
         } catch (err) {
             dispatch({ type: 'LOGIN_FAILURE', payload: err.response.data })
