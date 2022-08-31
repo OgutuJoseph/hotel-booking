@@ -1,115 +1,115 @@
 export const userInputs = [
     {
-        id: 1,
-        label: 'Username: ',
-        type: 'text',
-        placeholder: 'john_doe'
+        id: "username",
+        label: "Username",
+        type: "text",
+        placeholder: "john_doe",
     },
     {
-        id: 2,
-        label: 'First and Surname: ',
-        type: 'text',
-        placeholder: 'John Doe'
+        id: "email",
+        label: "Email",
+        type: "email",
+        placeholder: "john_doe@gmail.com",
     },
     {
-        id: 3,
-        label: 'Email: ',
-        type: 'email',
-        placeholder: 'johndoe@gmail.com'
+        id: "phone",
+        label: "Phone",
+        type: "text",
+        placeholder: "+1 234 567 89",
     },
     {
-        id: 4,
-        label: 'Phone: ',
-        type: 'text',
-        placeholder: '(+254) 720 100200'
+        id: "password",
+        label: "Password",
+        type: "password",
     },
     {
-        id: 5,
-        label: 'Password: ',
-        type: 'password'
+        id: "country",
+        label: "Country",
+        type: "text",
+        placeholder: "USA",
     },
-    {
-        id: 6,
-        label: 'Address: ',
-        type: 'text',
-        placeholder: 'Nairobi'
+        {
+        id: "city",
+        label: "City",
+        type: "text",
+        placeholder: "USA",
     },
-    {
-        id: 7,
-        label: 'Country: ',
-        type: 'text',
-        placeholder: 'Kenya'
-    }
 ];
 
 export const hotelInputs = [
     {
-        id: 1,
-        label: 'Name: ',
-        type: 'text',
-        placeholder: 'Enter Hotel Name'
+        id: "name",
+        label: "Name",
+        type: "text",
+        placeholder: "My Hotel",
     },
     {
-        id: 2,
-        label: 'Type: ',
-        type: 'text',
-        placeholder: 'Type'
+        id: "type",
+        label: "Type",
+        type: "text",
+        placeholder: "hotel",
     },
     {
-        id: 3,
-        label: 'City: ',
-        type: 'text',
-        placeholder: 'City'
+        id: "city",
+        label: "City",
+        type: "text",
+        placeholder: "New York",
     },
     {
-        id: 4,
-        label: 'Address: ',
-        type: 'text',
-        placeholder: 'Postal Address'
+        id: "address",
+        label: "Address",
+        type: "text",
+        placeholder: "elton st, 216",
     },
     {
-        id: 5,
-        label: 'Distance: ',
-        type: 'text',
-        placeholder: 'Distance from the Road'
+        id: "distance",
+        label: "Distance from City Center",
+        type: "text",
+        placeholder: "500",
     },
     {
-        id: 6,
-        label: 'Title: ',
-        type: 'text',
-        placeholder: 'Enter Title'
+        id: "title",
+        label: "Title",
+        type: "text",
+        placeholder: "The best Hotel",
     },
     {
-        id: 7,
-        label: 'Description: ',
-        type: 'text',
-        placeholder: 'Enter Description'
-    }
+        id: "desc",
+        label: "Description",
+        type: "text",
+        placeholder: "description",
+    },
+    {
+        id: "cheapestPrice",
+        label: "Price",
+        type: "text",
+        placeholder: "100",
+    },
 ];
 
 export const roomInputs = [
     {
-        id: 1,
-        label: 'Title: ',
-        type: 'text',
-        placeholder: 'Title'
+        id: "title",
+        label: "Title",
+        type: "text",
+        placeholder: "2 bed room",
     },
     {
-        id: 2,
-        label: 'Price: ',
-        type: 'number',
-        placeholder: 'Price'
+        id: "desc",
+        label: "Description",
+        type: "text",
+        placeholder: "King size bed, 1 bathroom",
     },
     {
-        id: 3,
-        label: 'Max People: ',
-        type: 'number',
-        placeholder: 'Maximum People'
+        id: "price",
+        label: "Price",
+        type: "number",
+        placeholder: "100",
     },
     {
-        id: 4,
-        label: 'Description: ',
-        type: 'text',
-        placeholder: 'Description'
-    }
+        id: "maxPeople",
+        label: "Max People",
+        type: "number",
+        placeholder: "2",
+    },
 ];

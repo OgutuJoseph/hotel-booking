@@ -5,6 +5,8 @@ import Login from './pages/login/Login';
 import List from './pages/list/List';
 import Single from './pages/single/Single';
 import New from './pages/new/New';
+import NewHotel from './pages/newHotel/NewHotel';
+import NewRoom from './pages/newRoom/NewRoom';
 import { userInputs, hotelInputs, roomInputs } from './formSource';
 import './style/dark.scss';
 import { DarkModeContext } from './context/darkModeContext';
@@ -43,12 +45,12 @@ function App() {
             <Route path='hotels'>
               <Route index element={<ProtectedRoute><List columns={hotelColumns} /></ProtectedRoute>} />
               <Route path=':hotelId' element={<ProtectedRoute><Single /></ProtectedRoute>} />
-              <Route path='new' element={<ProtectedRoute><New inputs={hotelInputs} title='Add New Hotel' /></ProtectedRoute>} />
+              <Route path='new' element={<ProtectedRoute><NewHotel inputs={hotelInputs} title='Add New Hotel' /></ProtectedRoute>} />
             </Route>
             <Route path='rooms'>
               <Route index element={<ProtectedRoute><List columns={roomColumns}  /></ProtectedRoute>} />
               <Route path=':hotelId' element={<ProtectedRoute><Single /></ProtectedRoute>} />
-              <Route path='new' element={<ProtectedRoute><New inputs={roomInputs} title='Add New Room' /></ProtectedRoute>} />
+              <Route path='new' element={<ProtectedRoute><NewRoom inputs={roomInputs} title='Add New Room' /></ProtectedRoute>} />
             </Route>
           </Route>
         </Routes>

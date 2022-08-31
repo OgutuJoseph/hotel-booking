@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import useFetch from "../../hooks/useFetch";
 import axios from 'axios';
 
-const DataTable = ({ columns }) => {
+const DataTable = ({ columns}) => {
 
     const [list, setList] = useState([]);
 
@@ -59,7 +59,7 @@ const DataTable = ({ columns }) => {
             <DataGrid
                 className='datagrid'
                 rows={list}
-                columns={columns}
+                columns={columns.concat(actionColumn)}
                 pageSize={9}
                 rowsPerPageOptions={[9]}
                 checkboxSelection
