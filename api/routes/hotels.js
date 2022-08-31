@@ -28,7 +28,7 @@ router.get('/countByType', countByType)
 
 router.get('/room/:id', getHotelRooms)
 
-// get all - test express error handler 1
+// get one - test express error handler 1
 // router.get('/', async (req, res, next) => {
     
 //     try {
@@ -39,7 +39,7 @@ router.get('/room/:id', getHotelRooms)
 //     }
 // })
 
-// get all - test express error handler 2
+// get one - test express error handler 2
 // router.get('/', async (req, res, next) => {
 
 //     const failed = true;
@@ -56,7 +56,7 @@ router.get('/room/:id', getHotelRooms)
 //     }
 // })
 
-// get all - test express error handler 3
+// get one - test express error handler 3
 // router.get('/', async (req, res, next) => {
 
 //     const failed = true;

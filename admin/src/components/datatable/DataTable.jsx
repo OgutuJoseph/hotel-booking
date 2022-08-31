@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import useFetch from "../../hooks/useFetch";
 import axios from 'axios';
 
-const DataTable = () => {
+const DataTable = ({ columns }) => {
 
     const [list, setList] = useState([]);
 
@@ -15,6 +15,7 @@ const DataTable = () => {
     const path = location.pathname.split('/')[1];
 
     const { data, loading, error }  = useFetch(`/${path}`)
+    console.log('data: ', data);
 
     useEffect(() => {
         setList(data);
@@ -50,15 +51,15 @@ const DataTable = () => {
     return (
         <div className='datatable'>
             <div className='datatableTitle'>
-                All Users
-                <Link to='/users/new' style={{ textDecoration: 'none' }} className='link'>
+                <h2 style={{ textTransform: 'Capitalize' }}>All {path}</h2>
+                <Link to={`/${path}/new`} style={{ textDecoration: 'none' }} className='link'>
                     Add New
                 </Link>  
             </div>
             <DataGrid
                 className='datagrid'
                 rows={list}
-                columns={userColumns.concat(actionColumn)}
+                columns={columns}
                 pageSize={9}
                 rowsPerPageOptions={[9]}
                 checkboxSelection
