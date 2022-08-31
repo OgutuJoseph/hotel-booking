@@ -8,8 +8,6 @@ import axios from 'axios';
 const New = ({ inputs, title }) => {
 
     const [file, setFile] = useState('');
-    // console.log('file: ', file);
-
     const [info, setInfo] = useState({});
 
     const handleChange = (e) => {
@@ -65,7 +63,7 @@ const New = ({ inputs, title }) => {
                                 <div className='formInput' key={input.id}>
                                     <label>{input.label}</label>
                                     <input type={input.type} placeholder={input.placeholder} onChange={handleChange} id={input.id} />
-                            </div> 
+                                </div> 
                             ))}
                             <button onClick={handleClick}>Save</button>
                         </form>    

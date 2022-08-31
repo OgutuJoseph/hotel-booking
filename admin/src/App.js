@@ -45,7 +45,7 @@ function App() {
             <Route path='hotels'>
               <Route index element={<ProtectedRoute><List columns={hotelColumns} /></ProtectedRoute>} />
               <Route path=':hotelId' element={<ProtectedRoute><Single /></ProtectedRoute>} />
-              <Route path='new' element={<ProtectedRoute><NewHotel inputs={hotelInputs} title='Add New Hotel' /></ProtectedRoute>} />
+              <Route path='new' element={<ProtectedRoute><NewHotel/></ProtectedRoute>} />
             </Route>
             <Route path='rooms'>
               <Route index element={<ProtectedRoute><List columns={roomColumns}  /></ProtectedRoute>} />
