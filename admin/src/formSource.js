@@ -31,7 +31,7 @@ export const userInputs = [
     {
         id: 6,
         label: 'Address: ',
-        type: 'email',
+        type: 'text',
         placeholder: 'Nairobi'
     },
     {
@@ -42,35 +42,74 @@ export const userInputs = [
     }
 ];
 
-export const productInputs = [
+export const hotelInputs = [
+    {
+        id: 1,
+        label: 'Name: ',
+        type: 'text',
+        placeholder: 'Enter Hotel Name'
+    },
+    {
+        id: 2,
+        label: 'Type: ',
+        type: 'text',
+        placeholder: 'Type'
+    },
+    {
+        id: 3,
+        label: 'City: ',
+        type: 'text',
+        placeholder: 'City'
+    },
+    {
+        id: 4,
+        label: 'Address: ',
+        type: 'text',
+        placeholder: 'Postal Address'
+    },
+    {
+        id: 5,
+        label: 'Distance: ',
+        type: 'text',
+        placeholder: 'Distance from the Road'
+    },
+    {
+        id: 6,
+        label: 'Title: ',
+        type: 'text',
+        placeholder: 'Enter Title'
+    },
+    {
+        id: 7,
+        label: 'Description: ',
+        type: 'text',
+        placeholder: 'Enter Description'
+    }
+];
+
+export const roomInputs = [
     {
         id: 1,
         label: 'Title: ',
         type: 'text',
-        placeholder: 'Apple Mac Book Pro'
+        placeholder: 'Title'
     },
     {
         id: 2,
-        label: 'Description: ',
-        type: 'text',
-        placeholder: 'description'
+        label: 'Price: ',
+        type: 'number',
+        placeholder: 'Price'
     },
     {
         id: 3,
-        label: 'Category: ',
-        type: 'text',
-        placeholder: 'Computers'
+        label: 'Max People: ',
+        type: 'number',
+        placeholder: 'Maximum People'
     },
     {
         id: 4,
-        label: 'Price: ',
-        type: 'number',
-        placeholder: '100'
-    },
-    {
-        id: 5,
-        label: 'Stock: ',
+        label: 'Description: ',
         type: 'text',
-        placeholder: 'In Stockc'
+        placeholder: 'Description'
     }
 ];
